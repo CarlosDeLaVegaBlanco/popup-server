@@ -144,7 +144,7 @@ def upload_files(popup_id: str):
 
 # Function to get the current time
 def get_current_time_details():
-    now = datetime.now(timezone.utc)
+    now = datetime.now() #(timezone.utc) will change the already UTC-formatted hour date to -1 its value
     return {"year": now.year, "month": now.month, "day": now.day, "hour": now.hour, "minute": now.minute, "second": now.second}
 
 @app.route('/gettime', methods=['GET'])
